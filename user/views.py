@@ -27,6 +27,7 @@ def get_login(request):
 
 @login_required
 def get_logout(request):
+    print("Hello")
     logout(request)
     messages.info(request, 'You are now loggout.')
     return HttpResponseRedirect(reverse('user:login'))
